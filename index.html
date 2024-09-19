@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rat in a Maze</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Rat in a Maze</h1>
+    <div id="selector-container">
+      <div>
+        <label for="rows">Rows: </label>
+        <select id="rows" onchange="generateMaze()">
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+      <div>
+        <label for="columns">Columns: </label>
+        <select id="columns" onchange="generateMaze()">
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="blocked">Blocked Nodes: </label>
+        <select id="blocked" onchange="generateMaze()">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="maze-container"></div>
+
+    <div id="actions">
+      <button onclick="solveMaze()">Solve Maze</button>
+      <button onclick="pauseSolving()">Pause</button>
+      <button onclick="resumeSolving()">Resume</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
